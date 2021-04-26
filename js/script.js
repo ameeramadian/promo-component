@@ -67,6 +67,9 @@ function addStyleClasses(activeLayout){
         }
         case 3 : {
             addThemeClass("z");
+            promoDiv.classList.add("col-sm-12", "col-md-8", "col-lg-5")
+            promoImageDiv.classList.add("col-sm-12", "col-md-4", "col-lg-12")
+
            break;
         }
         default: {
@@ -78,13 +81,18 @@ function addStyleClasses(activeLayout){
    }
 }
 
+function showButton(){
+    promoButton.style.display = "inline";
+}
+
+function hideButton(){
+    promoButton.style.display = "none";
+}
+
 setLayoutButtonActive(1);
 addStyleClasses(1);
 
 //////////////////////////////////////////////////////////// x Layout /////////////////////////////////////////////////////////////////////
-function showButton(){
-    promoButton.style.display = "inline";
-}
 
 firstLayoutBtn.addEventListener('click',event => {
     setLayoutButtonActive(1);
@@ -94,9 +102,6 @@ firstLayoutBtn.addEventListener('click',event => {
 
 //////////////////////////////////////////////////////////// y Layout /////////////////////////////////////////////////////////////////////
 
-function hideButton(){
-    promoButton.style.display = "none";
-}
 
 secondLayoutBtn.addEventListener('click',event => {
     setLayoutButtonActive(2);
@@ -109,4 +114,5 @@ secondLayoutBtn.addEventListener('click',event => {
 thirdLayoutBtn.addEventListener('click',event => {
     setLayoutButtonActive(3);
     addStyleClasses(3);
+    showButton();
 });
