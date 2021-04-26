@@ -1,5 +1,10 @@
 /* Global styles
 ------------------------------------*/
+
+$primaryTextBlue: #0a2554;
+$secondryTextGrey: #666666;
+$buttonTeel: #42c3af;
+
 html {
   box-sizing: border-box;
 }
@@ -22,17 +27,45 @@ a {
   width: 100%;
 }
 
-.promo {
-  text-align: center;
+.promo__title {
+  color: $primaryTextBlue;
+}
+
+.promo__description {
+  color: $secondryTextGrey;
+}
+
+.promo__button {
+  background-color: $buttonTeel;
+  border: none;
+  color: white;
+  padding: 10px 40px;
+  margin-right: 30px;
+  border-radius: 3px;
+  font-size: 1.25em;
+}
+
+@media (max-width: 576px) {
+  .promo__button {
+    padding: 8px 20px;
+    font-size: 1em;
+  }
+}
+
+.promo__seeMore {
+  color: $primaryTextBlue;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 3px;
+    text-decoration-color: $buttonTeel;
+  }
 }
 
 //////////////////////////////////////////////////////////// x Layout /////////////////////////////////////////////////////////////////////
 
-$primaryTextBlue: #0a2554;
-$secondryTextGrey: #666666;
-$buttonTeel: #42c3af;
-
-.theme {
+.theme--x {
   @media (max-width: 576px) {
     .promo__image {
       height: 200px;
@@ -52,47 +85,39 @@ $buttonTeel: #42c3af;
   }
 
   .promo {
-    .promo__title {
-      color: $primaryTextBlue;
-    }
-
-    .promo__description {
-      color: $secondryTextGrey;
-    }
-
-    .promo__button {
-      background-color: $buttonTeel;
-      border: none;
-      color: white;
-      padding: 10px 40px;
-      margin-right: 30px;
-      border-radius: 3px;
-      font-size: 1.25em;
-    }
-
-    @media (max-width: 576px) {
-      .promo__button {
-        padding: 8px 20px;
-        font-size: 1em;
-      }
-    }
-
-    .promo__seeMore {
-      color: $primaryTextBlue;
-      text-decoration: underline;
-      text-decoration-thickness: 3px;
-      text-underline-offset: 3px;
-      text-decoration-color: $buttonTeel;
-    }
+    text-align: center;
   }
 }
 
 //////////////////////////////////////////////////////////// y Layout /////////////////////////////////////////////////////////////////////
 
-.theme {
+.theme--y {
+  .promo__image {
+    margin: 24px 0px;
+  }
+
+  @media (max-width: 576px) {
+    .promo__image {
+      height: 200px;
+      margin: 0px;
+    }
+  }
+
+  .promo {
+    text-align: left;
+    margin-bottom: 124px;
+  }
 }
 
 //////////////////////////////////////////////////////////// z Layout /////////////////////////////////////////////////////////////////////
 
-.theme {
+.theme--z {
+  .promo {
+    text-align: left;
+  }
+  @media (max-width: 576px) {
+    .promo {
+      text-align: center;
+    }
+  }
 }
