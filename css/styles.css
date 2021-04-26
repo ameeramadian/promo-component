@@ -1,0 +1,61 @@
+/* Global styles
+------------------------------------*/
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+a {
+  margin-bottom: 100px; }
+
+.promo__image {
+  background-image: url("/images/promoimage.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%; }
+
+.promo {
+  text-align: center; }
+
+@media (max-width: 576px) {
+  .theme .promo__image {
+    height: 200px; } }
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .theme .promo__image {
+    height: 300px; } }
+
+@media (min-width: 767px) {
+  .theme .promo__image {
+    height: 400px; } }
+
+.theme .promo .promo__title {
+  color: #0a2554; }
+
+.theme .promo .promo__description {
+  color: #666666; }
+
+.theme .promo .promo__button {
+  background-color: #42c3af;
+  border: none;
+  color: white;
+  padding: 10px 40px;
+  margin-right: 30px;
+  border-radius: 3px;
+  font-size: 1.25em; }
+
+@media (max-width: 576px) {
+  .theme .promo .promo__button {
+    padding: 8px 20px;
+    font-size: 1em; } }
+
+.theme .promo .promo__seeMore {
+  color: #0a2554;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 3px;
+  text-decoration-color: #42c3af; }
