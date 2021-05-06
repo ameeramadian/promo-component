@@ -11,13 +11,6 @@ html {
 a {
   margin-bottom: 100px; }
 
-.promo__image {
-  background-image: url("/images/promoimage.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%; }
-
 .promo__title {
   color: #0a2554; }
 
@@ -58,7 +51,7 @@ a {
 .theme--x .promo {
   text-align: center; }
 
-.theme--x .clickables {
+.theme--x .promo__actions {
   margin-bottom: 16px; }
 
 .theme--y .promo__image {
@@ -79,7 +72,7 @@ a {
 .theme--z .promo__description {
   padding-bottom: 100px; }
 
-.theme--z .clickables {
+.theme--z .promo__actions {
   margin-bottom: 30px; }
 
 @media (max-width: 767px) {
